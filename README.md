@@ -10,9 +10,9 @@ To construct the index, we include the incubation period expectation of daily re
 
 The GFI has two parts: the Reported Cases Index (RCI) and the Reported Deaths Index (RDI). The RCI measures how peoples’ expectations on reported COVID-19 cases in the preceding 14-days period veered from the present day’s reported case. It is computed as the ratio of the sum of reported cases globally on the day under consideration and the sum of reported cases for the current day and reported cases at the start of the incubation period. The ratio is then multiplied by 100 to give the index on a scale between 0 and 100. 
 
-$$\ \left( \sum_{i=1}^N C_{i,t}^2 \right)  $$
+$$\ \left( \sum_{i=1}^N C_{i,t} \right)  $$
 
-$$RCI_{t} = \frac{\sum_{i=1}^N C_{i,t}}{\sum_{i=1}^N \left(C_{i,t}+C_{i,t-14}\right)}$$
+$$RCI_{t} = \left( \sum_{i=1}^N C_{i,t} } \over \sum_{i=1}^N \left( C_{i,t} + C_{i,t-14} \right) \right) \times 100 $$
 
 The first component of the COVID-19 Global Fear Index (
     
