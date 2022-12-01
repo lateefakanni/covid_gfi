@@ -8,26 +8,15 @@ neutral, while anything higher signals more fear than usual.
 
 To construct the index, we include the incubation period expectation of daily reported cases and reported COVID deaths. The incubation period expectation is defined as the time expectation between when a person could be exposed to the Coronavirus and emergence of symptoms of the disease.  Following the WHO estimate of the  COVID-19 incubation period range from 1-14 days (WHO, 2020), we considered the maximum range of 14 days in the computation.
 
-The GFI has two parts: the Reported Cases Index (RCI) and the Reported Deaths Index (RDI). The RCI measures how peoples’ expectations on reported COVID-19 cases in the preceding 14-days period veered from the present day’s reported case. It is computed as the ratio of the sum of daily reported cases across countries and the sum of reported cases in period t and at the start of the incubation period. The ratio is then multiplied by 100 to give the index on a scale between 0 and 100. 
+The GFI has two parts: the Reported Cases Index (RCI) and the Reported Deaths Index (RDI). The RCI measures how peoples’ expectations on reported COVID-19 cases in the preceding 14-days period veered from the present day’s reported case. It is computed as the ratio of the sum of daily reported cases across countries and the sum of reported cases in period _t_ and at the start of the incubation period (_t-14_). The ratio is then multiplied by 100 to give the index on a scale between 0 and 100. 
 
-$$\ \left( \sum_{i=1}^N C_{i,t} \right)  $$
+$$RCI_{t} = \left( { \sum_{i=1}^N C_{i,t} } \over { \sum_{i=1}^N \left( C_{i,t} + C_{i,t-14} \right) } \right) \times 100 $$
 
-$$RCI_{t} = \left( \sum_{i=1}^N C_{i,t} \over \sum_{i=1}^N \left( C_{i,t} + C_{i,t-14} \right) \right) \times 100 $$
+where $C_{i,t}$ is the daily reported COVID infections cases for country _i_ in period _t_. In a similar vein, the RDI measures how peoples’ expectations from reported deaths in the preceding 14-days period veered from the current day’s reported deaths. It is computed as:
 
-The first component of the COVID-19 Global Fear Index (
-    
-The second component is the Reported Deaths Index (RDI) and measures how far peoples’ 
-expectations from reported deaths in the preceding 14-days period veered from the present 
-day’s reported deaths. The RDI, just as the RCI, is computed as the ratio of COVID-19 
-related reported deaths across the world and the sum of reported deaths on the day under 
-consideration day and the start of its incubation period (14 days ago). The ratio is also 
-multiplied by 100 to give an index between 0 and 100. 
+$$RDI_{t} = \left( { \sum_{i=1}^N D_{i,t} } \over { \sum_{i=1}^N \left( D_{i,t} + D_{i,t-14} \right) } \right) \times 100 $$
 
-We collect the official data on  COVID-19 cases and associated deaths for every country from the , 
+Finally, the construct of the GFI pulls the two indexes together with equal weights assigned to obtain the composite index. The composite index is given as the simple average of RCI 
+and RDI defined above. The higher the value of GFI, the higher the global fear of the COVID-19 pandemic.
 
-
-
-Finally, the construct of the GFI pulls the two indexes together with equal weights assigned 
-to obtain the composite index. The composite index is given as the simple average of RCI 
-and RDI defined above. The higher the value of GFI, the higher the global fear of the 
-COVID-19 pandemic.1
+$$ GFI_{t} = \left[ 0.5 \left( RCI_{t} + RCI_{t} \right) \right]  $$
