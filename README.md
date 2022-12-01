@@ -12,7 +12,7 @@ The GFI has two parts: the Reported Cases Index (RCI) and the Reported Deaths In
 
 $$\ \left( \sum_{i=1}^N C_{i,t} \right)  $$
 
-$$RCI_{t} = \left( {\sum_{i=1}^N C_{i,t}} \over {\sum_{i=1}^N \left( C_{i,t} + C_{i,t-14} \right)} \right) \times 100 $$
+$$RCI_{t} = \left( \sum_{i=1}^N C_{i,t} \over \sum_{i=1}^N \left( C_{i,t} + C_{i,t-14} \right) \right) \times 100 $$
 
 The first component of the COVID-19 Global Fear Index (
     
