@@ -1,6 +1,8 @@
 clear
 
-cap cd "C:/Users/qrb20183/OneDrive - University of Strathclyde/personal/GitHub local/covid_gfi_data"
+dropbox
+
+cap cd "public good\covid_gfi_data"
 
 *ssc install sencode // uncomment to install "sencode" if not already installed on Stata
 
@@ -36,5 +38,9 @@ gen RDI = (new_deaths/(new_deaths+L14.new_deaths))*100 // Reported Deaths Index
 drop if RDI==100 | RDI==. // Drop outliers and missing obervations
 
 gen GFI = (RCI+RDI)/2 // Global Fear Index
+
+export delimited using "./data/gfi-data.csv", replace
+
+export  excel using "./data/gfi-data.xlsx", firstrow(variables) replace
 
 save ./data/gfi-data.dta, replace
