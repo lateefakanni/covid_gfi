@@ -15,7 +15,7 @@ $$\sum_{i=1}^{N} C_{i,t} $$
 $$\sum_{i=1}^{N} \left( C_{i,t} + C_{i,t-14} \right)$$
 
 
-$$RCI_{t} = \left( \frac{\sum_{i=1}^{N} C_{i,t}}{\sum_{i=1}^{N} (C_{i,t} + C_{i,t-14})} \right) \times 100 $$
+$$RCI_{t} = \left( \frac{\sum_{i=1}^{N}{C_{i,t}}}{\sum_{i=1}^{N}{(C_{i,t} + C_{i,t-14})}} \right) \times 100 $$
 
 where $C_{i,t}$ is the daily reported COVID infections cases for country _i_ in period _t_. In a similar vein, the RDI measures how peoples’ expectations from reported deaths in the preceding 14-days period veered from the current day’s reported deaths. It is computed as:
 
