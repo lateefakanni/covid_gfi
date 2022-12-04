@@ -15,7 +15,7 @@ $$RCI_{t} = \left( \sum_{i=1}^{N} C_{i,t} \div \sum_{i=1}^{N} \left( C_{i,t} + C
 
 where $C_{i,t}$ is the daily reported COVID infections cases for country _i_ in period _t_. In a similar vein, the RDI measures how peoples’ expectations from reported deaths in the preceding 14-days period veered from the current day’s reported deaths. It is computed as:
 
-$$RDI_{t} = \left( \sum_{i=1}^{N} D_{i,t} \div \sum_{i=1}^{N} \left( D_{i,t} + D_{i,t-14} \right) \right \times 100 $$
+$$RDI_{t} = \left( \sum_{i=1}^{N} D_{i,t} \div \sum_{i=1}^{N} \left( D_{i,t} + D_{i,t-14} \right) \right) \times 100 $$
 
 
 Finally, the construct of the GFI pulls the two indexes together with equal weights assigned to obtain the composite index. The composite index is given as the simple average of RCI 
